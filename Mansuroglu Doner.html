@@ -1,0 +1,118 @@
+<html>
+<body>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mansuroğlu Menü</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; padding: 20px; }
+    h1, h2 { color: #b30000; }
+    .menu-category { margin-top: 30px; }
+    .menu-item { margin: 8px 0; }
+    .price { font-weight: bold; color: #333; }
+    #admin-panel { display: none; margin-top: 30px; background: #fff3cd; padding: 20px; border: 1px solid #ffecb5; border-radius: 8px; }
+    input[type="number"] { width: 70px; }
+    img.logo { width: 150px; display: block; margin: 0 auto 20px; }
+  </style>
+</head>
+<body>
+
+  <img src="C:\Users\user\Downloads\logo.png" alt="Mansuroğlu Logo" class="logo">
+  <h1>📋 Mansuroğlu Menü</h1>
+
+  <!-- ET DÖNERLER -->
+  <div class="menu-category">
+    <h2>🥩 Et Dönerler</h2>
+    <div class="menu-item">Et Dürüm Antakya: <span class="price" id="et1">150</span>₺</div>
+    <div class="menu-item">Et Dürüm: <span class="price" id="et2">150</span>₺</div>
+    <div class="menu-item">Et Tabak Servis: <span class="price" id="et3">250</span>₺</div>
+    <div class="menu-item">Pilav Üstü Et Servis: <span class="price" id="et4">270</span>₺</div>
+    <div class="menu-item">Et İskender: <span class="price" id="et5">300</span>₺</div>
+    <div class="menu-item">Et Servis 1.5: <span class="price" id="et6">350</span>₺</div>
+    <div class="menu-item">1.5 Et Dürüm: <span class="price" id="et7">230</span>₺</div>
+    <div class="menu-item">Et Zurna: <span class="price" id="et8">250</span>₺</div>
+  </div>
+
+  <!-- DÜRÜMLER -->
+  <div class="menu-category">
+    <h2>🌯 Dürümler</h2>
+    <div class="menu-item">Dürüm Tam: <span class="price" id="dur1">140</span>₺</div>
+    <div class="menu-item">Dürüm 1.5 kişilik: <span class="price" id="dur2">190</span>₺</div>
+    <div class="menu-item">Dürüm Duble: <span class="price" id="dur3">240</span>₺</div>
+    <div class="menu-item">Zurna: <span class="price" id="dur4">190</span>₺</div>
+    <div class="menu-item">Antakya Menü: <span class="price" id="dur5">230</span>₺</div>
+    <div class="menu-item">Zurna Menü: <span class="price" id="dur6">270</span>₺</div>
+    <div class="menu-item">Zurna 1.5 kişilik: <span class="price" id="dur7">230</span>₺</div>
+    <div class="menu-item">Eko Dürüm: <span class="price" id="dur8">120</span>₺</div>
+  </div>
+
+  <!-- TABAKLAR -->
+  <div class="menu-category">
+    <h2>🍽️ Tabaklar</h2>
+    <div class="menu-item">Tabak Servis: <span class="price" id="tab1">220</span>₺</div>
+    <div class="menu-item">Tabak Servis 1.5 kişilik: <span class="price" id="tab2">320</span>₺</div>
+    <div class="menu-item">Tabak Servis Duble: <span class="price" id="tab3">350</span>₺</div>
+    <div class="menu-item">Pilav Üstü Tam: <span class="price" id="tab4">240</span>₺</div>
+    <div class="menu-item">Pilav Üstü 1.5 kişilik: <span class="price" id="tab5">340</span>₺</div>
+  </div>
+
+  <!-- MEŞRUBATLAR -->
+  <div class="menu-category">
+    <h2>🥤 Meşrubatlar</h2>
+    <div class="menu-item">Coca Cola Zero: <span class="price" id="ice1">60</span>₺</div>
+    <div class="menu-item">Çay: <span class="price">İkram</span></div>
+    <div class="menu-item">Soda: <span class="price" id="ice2">30</span>₺</div>
+    <div class="menu-item">Ayran: <span class="price" id="ice3">30</span>₺</div>
+    <div class="menu-item">Su: <span class="price" id="ice4">20</span>₺</div>
+    <div class="menu-item">Fanta: <span class="price" id="ice5">60</span>₺</div>
+    <div class="menu-item">Sprite: <span class="price" id="ice6">60</span>₺</div>
+    <div class="menu-item">Şalgam: <span class="price" id="ice7">40</span>₺</div>
+    <div class="menu-item">Kutu Kola: <span class="price" id="ice8">60</span>₺</div>
+    <div class="menu-item">Şişe Kola: <span class="price" id="ice9">60</span>₺</div>
+    <div class="menu-item">Fuse Tea Şeftali: <span class="price" id="ice10">60</span>₺</div>
+    <div class="menu-item">Fuse Tea Mango: <span class="price" id="ice11">60</span>₺</div>
+    <div class="menu-item">Coca Cola 1 litre: <span class="price" id="ice12">65</span>₺</div>
+    <div class="menu-item">Fuse Tea Limon: <span class="price" id="ice13">60</span>₺</div>
+    <div class="menu-item">Fuse Tea Karpuz: <span class="price" id="ice14">60</span>₺</div>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <button onclick="document.getElementById('admin-panel').style.display='block'">🔒 Fiyatları Değiştir</button>
+
+  <div id="admin-panel">
+    <p>Şifre: <input type="password" id="passwordInput" />
+    <button onclick="checkPassword()">Giriş</button></p>
+
+    <div id="priceEditor" style="display:none;">
+      <p>ID'sine göre ürün fiyatı değiştir: 
+      <input type="text" placeholder="örn: et1" id="price-id" />
+      <input type="number" placeholder="Yeni fiyat" id="price-value" />
+      <button onclick="updatePrice()">Kaydet</button></p>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      if (input === "mansur123") {
+        document.getElementById("priceEditor").style.display = "block";
+      } else {
+        alert("❌ Şifre yanlış!");
+      }
+    }
+
+    function updatePrice() {
+      const id = document.getElementById("price-id").value;
+      const value = document.getElementById("price-value").value;
+      const span = document.getElementById(id);
+      if (span && value) {
+        span.textContent = value;
+        alert("✅ Fiyat güncellendi!");
+      } else {
+        alert("Hatalı ID veya değer");
+      }
+    }
+  </script>
+
+</body>
+</html>
